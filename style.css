@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+}
+
+header {
+    height: 75px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    background: #080808dd;
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    font-size: 27px;
+}
+
+span,
+.title {
+    color: #39ff88;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #39ff88;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    transition: 0.4s;
+}
+
+nav a:hover {
+    color: #39ff88;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+header button,
+#exploreBtn,
+#startBtn {
+    background: #39ff88;
+    border: none;
+    padding: 12px 23px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header button:hover,
+#exploreBtn:hover,
+#startBtn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px #39ff8844;
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 150px 8% 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:
+        radial-gradient(circle at 80% 50%, #39ff8818, transparent 30%);
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.hero-text > p:first-child {
+    color: #39ff88;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h2 {
+    font-size: 78px;
+    line-height: 0.95;
+    margin: 20px 0;
+}
+
+.description {
+    color: #999;
+    max-width: 530px;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero-card {
+    width: 300px;
+    height: 390px;
+    padding: 30px;
+    background: linear-gradient(145deg, #151515, #0d0d0d);
+    border: 1px solid #292929;
+    transform: rotate(4deg);
+    transition: 0.5s;
+}
+
+.hero-card:hover {
+    transform: rotate(0deg) translateY(-15px);
+    border-color: #39ff88;
+    box-shadow: 0 25px 60px #39ff8820;
+}
+
+.ball {
+    font-size: 100px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.hero-card p {
+    color: #39ff88;
+    letter-spacing: 4px;
+}
+
+.hero-card h3 {
+    font-size: 40px;
+    margin-top: 15px;
+}
+
+.sports,
+.players {
+    padding: 110px 8%;
+    text-align: center;
+}
+
+.title {
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.sports h2,
+.players h2 {
+    font-size: 50px;
+    margin: 15px 0 50px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #111;
+    padding: 30px 25px;
+    text-align: left;
+    border: 1px solid #222;
+    position: relative;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    border-color: #39ff88;
+    box-shadow: 0 20px 40px #39ff8815;
+}
+
+.sport-icon {
+    font-size: 50px;
+    margin-bottom: 25px;
+    transition: 0.4s;
+}
+
+.card:hover .sport-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.card h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.sportBtn {
+    background: transparent;
+    color: #39ff88;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.likeBtn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background: #222;
+    color: white;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.likeBtn:hover,
+.likeBtn.liked {
+    background: #39ff88;
+    color: black;
+}
+
+#sportResult,
+#playerResult,
+#aboutResult {
+    margin-top: 30px;
+    color: #39ff88;
+    font-weight: bold;
+}
+
+.players-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.player {
+    padding: 30px;
+    height: 260px;
+    text-align: left;
+    background: #111;
+    border-left: 4px solid #39ff88;
+    transition: 0.4s;
+}
+
+.player:hover {
+    transform: translateY(-10px);
+    background: #151515;
+}
+
+.player > span {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.player h3 {
+    font-size: 28px;
+    margin: 25px 0 8px;
+}
+
+.player p {
+    color: #777;
+}
+
+.playerBtn {
+    margin-top: 25px;
+    padding: 9px 18px;
+    background: transparent;
+    border: 1px solid #39ff88;
+    color: #39ff88;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.playerBtn:hover {
+    background: #39ff88;
+    color: black;
+}
+
+.stats {
+    padding: 60px 8%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #39ff88;
+    color: black;
+    text-align: center;
+}
+
+.stats h2 {
+    font-size: 40px;
+}
+
+.stats p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.about {
+    padding: 120px 20%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 60px;
+    margin: 20px 0;
+}
+
+.about > p:not(.title) {
+    color: #888;
+    line-height: 1.7;
+    font-size: 17px;
+    max-width: 600px;
+    margin: auto auto 30px;
+}
+
+footer {
+    padding: 35px 8%;
+    display: flex;
+    justify-content: space-between;
+    background: #050505;
+}
+
+footer p {
+    color: #666;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: #000b;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-box {
+    width: 400px;
+    background: #111;
+    padding: 40px;
+    position: relative;
+    border: 1px solid #39ff88;
+    box-shadow: 0 0 50px #39ff8822;
+}
+
+.modal-box h2 {
+    font-size: 35px;
+    margin: 10px 0 25px;
+}
+
+.modal-box input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    background: #191919;
+    border: 1px solid #333;
+    color: white;
+    outline: none;
+}
+
+.modal-box input:focus {
+    border-color: #39ff88;
+}
+
+#submitBtn {
+    width: 100%;
+    padding: 14px;
+    background: #39ff88;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#modalResult {
+    text-align: center;
+    color: #39ff88;
+    margin-top: 15px;
+}
+
+@media (max-width: 900px) {
+    nav {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 55px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .players-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .cards,
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .hero-card {
+        width: 260px;
+    }
+
+    .about {
+        padding: 80px 8%;
+    }
+
+    .about h2 {
+        font-size: 40px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

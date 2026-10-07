@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportZone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Sport<span>Zone</span></h1>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#sports">Sports</a>
+        <a href="#players">Players</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <button id="joinBtn">Join Now</button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <p>WELCOME TO SPORTZONE</p>
+
+        <h2>
+            YOUR PASSION.<br>
+            YOUR <span>SPORT.</span>
+        </h2>
+
+        <p class="description">
+            Discover your favorite sports, follow legendary players
+            and enjoy the world of sport.
+        </p>
+
+        <button id="exploreBtn">Explore Sports →</button>
+    </div>
+
+    <div class="hero-card">
+        <div class="ball">⚽</div>
+        <p>SPORT</p>
+        <h3>DON'T<br>STOPING</h3>
+    </div>
+</section>
+
+<section class="sports" id="sports">
+
+    <p class="title">POPULAR SPORTS</p>
+    <h2>Choose Your <span>Sport</span></h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="sport-icon">⚽</div>
+            <h3>Football</h3>
+            <p>The world's most popular sport.</p>
+            <button class="sportBtn">Explore →</button>
+            <button class="likeBtn">♡</button>
+        </div>
+
+        <div class="card">
+            <div class="sport-icon">🏀</div>
+            <h3>Basketball</h3>
+            <p>Fast, exciting and competitive.</p>
+            <button class="sportBtn">Explore →</button>
+            <button class="likeBtn">♡</button>
+        </div>
+
+        <div class="card">
+            <div class="sport-icon">🎾</div>
+            <h3>Tennis</h3>
+            <p>Power, precision and speed.</p>
+            <button class="sportBtn">Explore →</button>
+            <button class="likeBtn">♡</button>
+        </div>
+
+        <div class="card">
+            <div class="sport-icon">🥊</div>
+            <h3>Boxing</h3>
+            <p>Strength, courage and discipline.</p>
+            <button class="sportBtn">Explore →</button>
+            <button class="likeBtn">♡</button>
+        </div>
+
+    </div>
+
+    <div id="sportResult"></div>
+</section>
+
+<section class="players" id="players">
+
+    <p class="title">SPORT STARS</p>
+    <h2>Legendary <span>Players</span></h2>
+
+    <div class="players-box">
+
+        <div class="player">
+            <span>01</span>
+            <h3>Football</h3>
+            <p>THE BEAUTIFUL GAME</p>
+            <button class="playerBtn">View More</button>
+        </div>
+
+        <div class="player">
+            <span>02</span>
+            <h3>Basketball</h3>
+            <p>RISE ABOVE</p>
+            <button class="playerBtn">View More</button>
+        </div>
+
+        <div class="player">
+            <span>03</span>
+            <h3>Tennis</h3>
+            <p>NEVER GIVE UP</p>
+            <button class="playerBtn">View More</button>
+        </div>
+
+    </div>
+
+    <div id="playerResult"></div>
+</section>
+
+<section class="stats">
+
+    <div>
+        <h2>120+</h2>
+        <p>SPORT EVENTS</p>
+    </div>
+
+    <div>
+        <h2>50K+</h2>
+        <p>SPORT FANS</p>
+    </div>
+
+    <div>
+        <h2>30+</h2>
+        <p>PRO PLAYERS</p>
+    </div>
+
+    <div>
+        <h2>15</h2>
+        <p>SPORT TYPES</p>
+    </div>
+
+</section>
+
+<section class="about" id="about">
+    <p class="title">ABOUT SPORTZONE</p>
+
+    <h2>SPORT IS <span>MORE</span><br>THAN A GAME.</h2>
+
+    <p>
+        Train harder, dream bigger and never stop improving.
+        Every great player started with one simple step.
+    </p>
+
+    <button id="startBtn">Start Today</button>
+
+    <div id="aboutResult"></div>
+</section>
+
+<footer>
+    <h2>Sport<span>Zone</span></h2>
+    <p>© 2026 SportZone</p>
+</footer>
+
+<div class="modal" id="modal">
+
+    <div class="modal-box">
+
+        <button class="close" id="closeBtn">×</button>
+
+        <p class="title">WELCOME</p>
+        <h2>Join <span>SportZone</span></h2>
+
+        <input type="text" id="name" placeholder="Your name">
+        <input type="email" id="email" placeholder="Your email">
+
+        <button id="submitBtn">Join Now</button>
+
+        <p id="modalResult"></p>
+
+    </div>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
